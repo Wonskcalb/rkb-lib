@@ -14,7 +14,9 @@ Requires macOS Apple Silicon, Rekordbox 7.x, and `sqlcipher3` (via Homebrew) —
 2. Make your change.
 3. Verify locally:
    ```bash
-   uv run python -m compileall src
+   uv run ruff check .
+   uv run ruff format --check .
+   uv run pytest --tb=short -q
    uv run rkb --help
    ```
 4. Open a PR against `main`. CI runs the same checks.
@@ -25,3 +27,4 @@ Requires macOS Apple Silicon, Rekordbox 7.x, and `sqlcipher3` (via Homebrew) —
 - Playlist name/genre changes in `structure.toml` affect real Rekordbox data on the next `--apply`; call these out explicitly in your PR description.
 - No new abstractions or dependencies unless the task needs them.
 - Write in English — code, comments, docs, commit messages.
+- Test docstrings use Gherkin format: `"""Given <setup>, when <action>, then <outcome>."""`.

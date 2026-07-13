@@ -17,6 +17,7 @@ rkb = "rkb_lib.cli:main"
 [dependency-groups]
 dev = [
     "pre-commit>=4.0.0",
+    "pytest>=8.0.0",
     "ruff>=0.8.4",
 ]
 
