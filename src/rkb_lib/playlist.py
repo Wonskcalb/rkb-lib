@@ -142,7 +142,9 @@ def create_structure(db: Rekordbox6Database, dry_run: bool):
         genre_index = build_genre_index(db, ignored)
 
     total_indexed = sum(len(v) for v in genre_index.values())
-    console.print(f"[dim]{total_indexed} tracks across {len(genre_index)} distinct genres.[/]\n")
+    console.print(
+        f"[dim]{total_indexed} tracks across {len(genre_index)} distinct genres.[/]\n"
+    )
 
     total_tracks_added = 0
 
@@ -166,12 +168,16 @@ def create_structure(db: Rekordbox6Database, dry_run: bool):
                 )
                 continue
 
-            playlist, _ = _get_or_reset_playlist(db, playlist_name, root_folder, dry_run=False)
+            playlist, _ = _get_or_reset_playlist(
+                db, playlist_name, root_folder, dry_run=False
+            )
             for track in tracks:
                 db.add_to_playlist(playlist, track)
 
             total_tracks_added += len(tracks)
-            console.print(f"  [green]✓[/] {playlist_name} — [cyan]{len(tracks)} tracks[/]")
+            console.print(
+                f"  [green]✓[/] {playlist_name} — [cyan]{len(tracks)} tracks[/]"
+            )
 
         console.print()
 
@@ -179,17 +185,23 @@ def create_structure(db: Rekordbox6Database, dry_run: bool):
 
     if dry_run:
         console.print(f"[bold cyan]{TODO_FOLDER}[/]")
-        console.print(f"  {TODO_PLAYLIST} — [cyan]{len(unmapped_tracks)} tracks[/] unmapped")
+        console.print(
+            f"  {TODO_PLAYLIST} — [cyan]{len(unmapped_tracks)} tracks[/] unmapped"
+        )
         if unmapped_genres:
             console.print(f"\n  [yellow]Unmapped genres ({len(unmapped_genres)}):[/]")
             for g in sorted(unmapped_genres):
                 n = len(genre_index.get(g.lower(), []))
                 console.print(f"    • [yellow]{g!r}[/] [dim]({n} tracks)[/]")
-        console.print("\n[dim]Dry run — no changes made. Run with [bold]--apply[/] to apply.[/]")
+        console.print(
+            "\n[dim]Dry run — no changes made. Run with [bold]--apply[/] to apply.[/]"
+        )
         return
 
     todo_folder = _get_or_create_folder(db, TODO_FOLDER, parent=None, dry_run=False)
-    todo_playlist, _ = _get_or_reset_playlist(db, TODO_PLAYLIST, todo_folder, dry_run=False)
+    todo_playlist, _ = _get_or_reset_playlist(
+        db, TODO_PLAYLIST, todo_folder, dry_run=False
+    )
     for track in unmapped_tracks:
         db.add_to_playlist(todo_playlist, track)
     total_tracks_added += len(unmapped_tracks)
@@ -206,18 +218,22 @@ def create_structure(db: Rekordbox6Database, dry_run: bool):
 
 def run(dry_run: bool = True):
     if dry_run:
-        console.print(Panel(
-            "[bold]DRY RUN[/] — no changes will be made\n"
-            "[dim]Run with [bold]--apply[/] to apply.[/]",
-            border_style="dim",
-            expand=False,
-        ))
+        console.print(
+            Panel(
+                "[bold]DRY RUN[/] — no changes will be made\n"
+                "[dim]Run with [bold]--apply[/] to apply.[/]",
+                border_style="dim",
+                expand=False,
+            )
+        )
     else:
-        console.print(Panel(
-            "[bold red]APPLY MODE[/] — Rekordbox must be [bold]CLOSED[/]",
-            border_style="red",
-            expand=False,
-        ))
+        console.print(
+            Panel(
+                "[bold red]APPLY MODE[/] — Rekordbox must be [bold]CLOSED[/]",
+                border_style="red",
+                expand=False,
+            )
+        )
 
     backup_database(dry_run)
 

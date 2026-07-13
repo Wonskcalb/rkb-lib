@@ -35,6 +35,7 @@ def main() -> None:
 
     if args[0] == "playlists":
         from rkb_lib.playlist import run
+
         run(dry_run="--apply" not in args)
         return
 
@@ -44,10 +45,13 @@ def main() -> None:
         if "--search" in args:
             idx = args.index("--search")
             if idx + 1 >= len(args):
-                console.print("[bold red]Usage:[/] rkb genres --search [green]<query>[/]")
+                console.print(
+                    "[bold red]Usage:[/] rkb genres --search [green]<query>[/]"
+                )
                 raise SystemExit(1)
             search = args[idx + 1]
         from rkb_lib.genres import run
+
         run(search=search, interactive=interactive)
         return
 

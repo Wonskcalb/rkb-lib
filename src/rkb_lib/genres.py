@@ -36,7 +36,9 @@ def _update_id3_genre(file_path: str, genre: str) -> bool:
         audio.save()
         return True
     except Exception as e:
-        console.print(f"  [yellow]WARN[/] ID3 tag not updated ({os.path.basename(file_path)}): {e}")
+        console.print(
+            f"  [yellow]WARN[/] ID3 tag not updated ({os.path.basename(file_path)}): {e}"
+        )
         return False
 
 
@@ -69,7 +71,9 @@ def rename_genre(
         return 0
 
     if dry_run:
-        console.print(f"  [dim]DRY-RUN[/] {len(tracks)} tracks: {old_name!r} → {new_name!r}")
+        console.print(
+            f"  [dim]DRY-RUN[/] {len(tracks)} tracks: {old_name!r} → {new_name!r}"
+        )
         return len(tracks)
 
     new_genre = _get_or_create_rkb_genre(db, new_name)
@@ -137,8 +141,12 @@ def search_genrefy(query: str) -> None:
 # ── Output ────────────────────────────────────────────────────────────────────
 
 
-def _print_genre_table(genre_counts: dict[str, int], mapped_lower: set) -> tuple[list, list]:
-    unmapped = [(n, c) for n, c in genre_counts.items() if n.lower() not in mapped_lower]
+def _print_genre_table(
+    genre_counts: dict[str, int], mapped_lower: set
+) -> tuple[list, list]:
+    unmapped = [
+        (n, c) for n, c in genre_counts.items() if n.lower() not in mapped_lower
+    ]
     mapped = [(n, c) for n, c in genre_counts.items() if n.lower() in mapped_lower]
 
     table = Table(box=box.ROUNDED, show_header=True, padding=(0, 1))
@@ -157,9 +165,9 @@ def _print_genre_table(genre_counts: dict[str, int], mapped_lower: set) -> tuple
     stats = Table(box=box.SIMPLE, show_header=False, padding=(0, 2))
     stats.add_column(style="dim")
     stats.add_column(justify="right")
-    stats.add_row("Mapped",   f"[green]{len(mapped)}[/]")
+    stats.add_row("Mapped", f"[green]{len(mapped)}[/]")
     stats.add_row("Unmapped", f"[red]{len(unmapped)}[/]")
-    stats.add_row("Total",    f"[bold]{len(genre_counts)}[/]")
+    stats.add_row("Total", f"[bold]{len(genre_counts)}[/]")
     console.print(stats)
 
     return mapped, unmapped
