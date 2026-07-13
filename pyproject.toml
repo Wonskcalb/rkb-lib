@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "pyrekordbox>=0.4.4",
-    "setuptools>=82.0.1",
+    "setuptools>=83.0.0",
     "mutagen>=1.47.0",
     "rich>=13.0.0",
 ]
