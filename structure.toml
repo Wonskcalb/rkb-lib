@@ -1,0 +1,299 @@
+# Genres present in DB but intentionally ignored (junk, out of DJ scope)
+[ignored_genres]
+genres = [
+    "http://vk.com/club44290270",
+    "https://djsoundtop.com",
+    "iRingtone",
+    "internet",
+    "matrodasound",
+    "mp3-crazy",
+    "Loop Samples",
+    "Remix",
+    "Sped Up",
+]
+
+# Playlist structure — 2 levels: [Root folder, Playlist]
+# genres = list of Rekordbox Genre tags to include (case-insensitive)
+# Genres not listed here automatically land in TODO / A Classer
+
+# ── DEEP & ORGANIC ────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["DEEP & ORGANIC", "Deep House"]
+genres = [
+    "Deep House",
+    "House - Deep",
+    "House",
+]
+
+[[playlist]]
+path = ["DEEP & ORGANIC", "Afro & Organic House"]
+genres = [
+    "Afro House",
+    "Organic House",
+    "Afro Melodic",
+]
+
+[[playlist]]
+path = ["DEEP & ORGANIC", "Indie Dance & Nu Disco"]
+genres = [
+    "Indie Dance",
+    "Nu Disco",
+    "Nu Disco / Disco",
+    "House & Nu Disco",
+    "Dark Disco",
+    "Disco & Funk",
+]
+
+# ── GROOVE & TECH ─────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["GROOVE & TECH", "Tech House & Jackin'"]
+genres = [
+    "Tech House",
+    "Afro Tech House",
+    "Funky House",
+    "Funky House / Groove / Jackin' House",
+    "Jackin House",
+]
+
+[[playlist]]
+path = ["GROOVE & TECH", "Progressive House"]
+genres = [
+    "Progressive House",
+]
+
+[[playlist]]
+path = ["GROOVE & TECH", "Future House"]
+genres = [
+    "Future House",
+    "Bass House",
+    "Electro House",
+    "Electro",
+    "Dance",
+    "Dance & EDM",
+]
+
+# ── MELODIC ───────────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["MELODIC", "Melodic Techno"]
+genres = [
+    "Melodic Techno",
+    "Melodic House",
+    "Melodic House & Techno",
+    "Techno (Raw / Deep / Hypnotic)",
+]
+
+[[playlist]]
+path = ["MELODIC", "Progressive Trance"]
+genres = [
+    "Trance (Main Floor)",
+    "Tech Trance",
+    "Progressive Trance",
+]
+
+# ── DARK & DRIVING ────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["DARK & DRIVING", "Future Rave"]
+genres = [
+    "Future Rave",
+]
+
+[[playlist]]
+path = ["DARK & DRIVING", "Peak Time Techno"]
+genres = [
+    "Techno (Peak Time / Driving)",
+    "Techno",
+    "Detroit Techno",
+]
+
+[[playlist]]
+path = ["DARK & DRIVING", "Raw & Deep Techno"]
+genres = [
+    "Afro",
+]
+
+[[playlist]]
+path = ["DARK & DRIVING", "Hard Techno & Industrial"]
+genres = [
+    "Hard Techno",
+    "Hardtechno",
+]
+
+[[playlist]]
+path = ["DARK & DRIVING", "Acid & Rave"]
+genres = [
+    "90's Acidcore",
+    "Rave",
+    "Neo Rave",
+    "Acidcore",
+]
+
+# ── TRANCE & UPLIFTING ────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["TRANCE & UPLIFTING", "Uplifting & Main Floor"]
+genres = [
+    "Mainstage",
+    "EDM & Electro",
+    "Hard Trance",
+    "Trance",
+    "Uplifting Trance",
+]
+
+[[playlist]]
+path = ["TRANCE & UPLIFTING", "Psy-Trance"]
+genres = [
+    "Psy-Trance",
+]
+
+# ── FESTIVAL ──────────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["FESTIVAL", "Big Room & Mainstage"]
+genres = [
+    "Mainstage",
+    "EDM & Electro",
+    "Big Room",
+    "Dance & Electronic (Dance/Techno/Disco)",
+]
+
+[[playlist]]
+path = ["FESTIVAL", "Hard Dance & Neo Rave"]
+genres = [
+    "Hard Dance",
+    "Hard Dance / Hardcore / Neo Rave",
+    "Happy Hardcore",
+    "Gabber",
+]
+
+[[playlist]]
+path = ["FESTIVAL", "Hardstyle"]
+genres = [
+    "Hardstyle",
+]
+
+# ── BREAKS & BASS ─────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["BREAKS & BASS", "Breakbeat & UK Bass"]
+genres = [
+    "Breaks / Breakbeat / UK Bass",
+    "Breakbeat",
+    "Grime",
+]
+
+[[playlist]]
+path = ["BREAKS & BASS", "Drum & Bass"]
+genres = [
+    "Drum & Bass",
+    "Drum and Bass",
+]
+
+[[playlist]]
+path = ["BREAKS & BASS", "Dubstep & Bass"]
+genres = [
+    "Dubstep",
+    "Electro;Dubstep",
+    "Electro;Dubstep;Dance",
+]
+
+[[playlist]]
+path = ["BREAKS & BASS", "Trap & Future Bass"]
+genres = [
+    "Trap",
+    "Trap / Future Bass",
+    "Future Bass",
+]
+
+# ── WORLD & GROOVE ────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["WORLD & GROOVE", "Afro & Latin"]
+genres = [
+    "Moombahton",
+    "Afrobeat",
+    "Dancehall",
+    "Latin Jazz",
+    "Merengue",
+    "Reggae",
+    "Reggaeton",
+    "Salsa",
+    "World",
+]
+
+[[playlist]]
+path = ["WORLD & GROOVE", "Disco & Funk"]
+genres = [
+    "Disco",
+    "Funk",
+    "Soul",
+]
+
+# ── TOOLS ─────────────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["TOOLS", "Warm Up"]
+genres = [
+    "DJ Tools / Acapellas",
+    "Dawn Patrol",
+]
+
+[[playlist]]
+path = ["TOOLS", "Transitions"]
+genres = []
+
+[[playlist]]
+path = ["TOOLS", "Closing"]
+genres = []
+
+# ── HIP-HOP ───────────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["HIP-HOP", "Hip-Hop"]
+genres = [
+    "Hip-Hop",
+]
+
+# ── ELECTRONICA ───────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["ELECTRONICA", "Electronic & Ambient"]
+genres = [
+    "Electronic",
+    "Electronica",
+    "Glitch",
+]
+
+# ── VARIÉTÉS ──────────────────────────────────────────────────────────────────
+
+[[playlist]]
+path = ["VARIÉTÉS", "Pop"]
+genres = [
+    "Pop",
+    "Рор",
+    "Holiday",
+]
+
+[[playlist]]
+path = ["VARIÉTÉS", "Rock & Indie"]
+genres = [
+    "Rock",
+    "Indie Rock",
+    "Americana",
+]
+
+[[playlist]]
+path = ["VARIÉTÉS", "Metal"]
+genres = [
+    "Melodic Death Metal",
+]
+
+# ── TODO ──────────────────────────────────────────────────────────────────────
+# Do not edit: A Classer is auto-populated with unmapped genres
+
+[[playlist]]
+path = ["TODO", "A Classer"]
+genres = []
